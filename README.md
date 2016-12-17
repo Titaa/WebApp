@@ -3,7 +3,7 @@
 Our first Web app using ruby on rails !
 
 Damase Aymeric
-RajaonaDaka Thimothé
+RajaonaDaka Timothé
 
 
 *****************
