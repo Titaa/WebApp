@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails',        '5.0.0.1'
 gem 'bcrypt',         '3.1.11'
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'puma',         '3.4.0'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.0.0'
