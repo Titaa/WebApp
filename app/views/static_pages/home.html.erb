@@ -1,0 +1,17 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Sporty !</title>
+  </head>
+  <body>
+    <div class="center jumbotron">
+    <h1>BIENVENUE CHEZ TITAA ET TOLIMOTE</h1>
+    <h2>ICI ON EST SUR L'ACCUEIL : HOME</h2>
+    <%= link_to "Je m'inscris !", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("logoesiea.png", alt: "Logo Esiea"),
+           'http://www.esiea.com/' %>
+  </body>
+</html>
