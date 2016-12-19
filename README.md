@@ -1,6 +1,11 @@
 # README
 
-Our first Web app using ruby on rails !
+Notre première application avec Ruby on rails !
+
+Retrouvez notre site  : https://pdj.herokuapp.com/
+
+Elle consiste en une forme de twitter qui permet de poster des statuts puis d'aller voir le profil des autres utilisateurs pour voir leurs status.
+Elle reprend le principe des "Phrase du jour by", ici adapté pour notre école, l'ESIEA. 
 
 Damase Aymeric
 RajaonaDaka Timothé
