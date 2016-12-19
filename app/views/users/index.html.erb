@@ -5,6 +5,7 @@
 
 <ul class="users">
   <%= render @users %>
+  <%= link_to 'Json', users_path + '.json', class: "btn btn-theme", target: "_blank" %>
 </ul>
 
 <%= will_paginate %>

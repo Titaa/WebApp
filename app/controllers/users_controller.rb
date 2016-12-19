@@ -18,14 +18,17 @@ class UsersController < ApplicationController
 
     def create
      @user = User.new(user_params)
+     respond_to do |format|
      if @user.save
-       flash[:success] = "Bienvenue dans la famille !"
-       redirect_to @user
+       format.html { redirect_to @user, notice:'Bienvenue dans la famille !'}
+       format.json {render :show,status: :created,location: @user}
        # Handle a successful save.
      else
-       render 'new'
+       format.html {render :new}
+       format.json {render json: @user.errors, status: :unprocessable_entity}
      end
    end
+ end
 
    def edit
     @user = User.find(params[:id])
@@ -33,18 +36,24 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+     respond_to do |format|
     if @user.update_attributes(user_params)
       # Handle a successful update.
-      flash[:success] = "Profil mis à jour !"
-      redirect_to @user
+      format.html { redirect_to @user, notice:'Profil bien mis à jour!'}
+      format.json {render :show,status: :ok,location: @user}
     else
-      render 'edit'
+      format.html {render :edit}
+      format.json {render json: @user.errors, status: :unprocessable_entity}
+      end
     end
   end
+
   def destroy
    User.find(params[:id]).destroy
-   flash[:success] = "Utilisateur supprimé"
-   redirect_to users_url
+    respond_to do |format|
+   format.html { redirect_to users_url, notice:'User supprimé !'}
+   format.json {head :no_content}
+ end
  end
 
    private
